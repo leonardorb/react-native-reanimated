@@ -1,8 +1,9 @@
 name: Build npm package
 
 on:
-  schedule:
-    - cron: '0 12 */1 * *'
+  push:
+    tags:
+      - '[v]?[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   build:
